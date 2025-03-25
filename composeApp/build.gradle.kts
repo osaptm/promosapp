@@ -109,6 +109,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.foundation.layout.android)
     debugImplementation(compose.uiTooling)
     //ROOM KSP
     add("kspAndroid", libs.androidx.room.compiler)
