@@ -3,7 +3,7 @@ import ComposeApp
 
 @main
 struct iOSApp: App {
-    init() { InitKoinKt.initKoinIos() }
+    init() { InitKoinKt.doInitKoinIos() }
     var body: some Scene {
         WindowGroup {
             ContentView()

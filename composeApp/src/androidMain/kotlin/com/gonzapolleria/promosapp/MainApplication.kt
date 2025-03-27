@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
 import org.koin.android.ext.koin.androidContext
-import com.gonzapolleria.promosapp.shared.di.initKoin
+import com.gonzapolleria.promosapp.core.di.initKoin
 
 @SuppressLint("StaticFieldLeak")
 object ApplicationContextProvider {

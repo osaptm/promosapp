@@ -1,0 +1,85 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "df8c07746daa36b70bfccb33017fe11a",
+    "entities": [
+      {
+        "tableName": "config",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `login_email` INTEGER NOT NULL, `login_apple` INTEGER NOT NULL, `login_google` INTEGER NOT NULL, `onboarding_inicio` INTEGER NOT NULL, `onboarding_afterlogin` INTEGER NOT NULL, `dark_mode` INTEGER NOT NULL, `logo` TEXT NOT NULL, `video` TEXT NOT NULL, `other_vars` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "login_email",
+            "columnName": "login_email",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "login_apple",
+            "columnName": "login_apple",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "login_google",
+            "columnName": "login_google",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "onboarding_inicio",
+            "columnName": "onboarding_inicio",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "onboarding_afterlogin",
+            "columnName": "onboarding_afterlogin",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dark_mode",
+            "columnName": "dark_mode",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "logo",
+            "columnName": "logo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "video",
+            "columnName": "video",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "other_vars",
+            "columnName": "other_vars",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'df8c07746daa36b70bfccb33017fe11a')"
+    ]
+  }
+}

@@ -4,4 +4,5 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 @Composable
-expect fun VideoPlayer(modifier: Modifier, videoURL: String)
+expect fun VideoPlayer(modifier: Modifier,
+                       videoURL: String)

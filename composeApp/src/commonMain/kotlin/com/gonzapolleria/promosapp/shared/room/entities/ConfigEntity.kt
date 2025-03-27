@@ -7,5 +7,13 @@ import androidx.room.PrimaryKey
 data class ConfigEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0L,
-    val darkMode: Boolean
+    val login_email: Boolean = true,
+    val login_apple: Boolean = true,
+    val login_google: Boolean = true,
+    val onboarding_inicio: Boolean = true,
+    val onboarding_afterlogin: Boolean = true,
+    val dark_mode: Boolean = true,
+    val logo: String = "",
+    val video: String = "",
+    val other_vars: String = ""
 )
