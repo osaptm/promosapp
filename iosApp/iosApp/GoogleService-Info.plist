@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>696985231159-endnu89fl60imso0te829i4r1qan7nk7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.696985231159-endnu89fl60imso0te829i4r1qan7nk7</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>696985231159-084nfk9sr2mdgk4e6e7f6aimstk94530.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBYmiWZiWnlQKrDwQ1RldPJcTBzSfCreXI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>696985231159</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gonzapolleria.promosapp.PromosApp</string>
+	<key>PROJECT_ID</key>
+	<string>gonzapromos</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gonzapromos.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:696985231159:ios:fe95aafd03eca70acf04b2</string>
+</dict>
+</plist>

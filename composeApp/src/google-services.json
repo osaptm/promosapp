@@ -1,0 +1,186 @@
+{
+  "project_info": {
+    "project_number": "696985231159",
+    "project_id": "gonzapromos",
+    "storage_bucket": "gonzapromos.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696985231159:android:f2a943e3095522e9cf04b2",
+        "android_client_info": {
+          "package_name": "com.gonzapolleria.kmp2025"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696985231159-084nfk9sr2mdgk4e6e7f6aimstk94530.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gonzapolleria.kmp2025",
+            "certificate_hash": "a03e6001e94baa2cfcde7bc85a02d4596a20af6f"
+          }
+        },
+        {
+          "client_id": "696985231159-2diso3rj955iuifd5v8bi7k207vn60ff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAntr8hlMFBUtna4rpzjYNcM8mCk3uLM30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696985231159-2diso3rj955iuifd5v8bi7k207vn60ff.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "696985231159-0niq67varsprucr4isasbbgf92bbir6a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.santimattius.kmp.compose.skeleton.kmp-compose-gradle-skeleton"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696985231159:android:4f3a96c3660395f6cf04b2",
+        "android_client_info": {
+          "package_name": "com.gonzapolleria.loginkmpauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696985231159-ag9rkhdtm1jk8tpvotnga7cu2tnie9lr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gonzapolleria.loginkmpauth",
+            "certificate_hash": "a03e6001e94baa2cfcde7bc85a02d4596a20af6f"
+          }
+        },
+        {
+          "client_id": "696985231159-2diso3rj955iuifd5v8bi7k207vn60ff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAntr8hlMFBUtna4rpzjYNcM8mCk3uLM30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696985231159-2diso3rj955iuifd5v8bi7k207vn60ff.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "696985231159-0niq67varsprucr4isasbbgf92bbir6a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.santimattius.kmp.compose.skeleton.kmp-compose-gradle-skeleton"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696985231159:android:a75f4b35712ad278cf04b2",
+        "android_client_info": {
+          "package_name": "com.gonzapolleria.promosapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696985231159-6o5ajc4mu7f2fmg8l4pp8rfodu9327ti.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gonzapolleria.promosapp",
+            "certificate_hash": "a03e6001e94baa2cfcde7bc85a02d4596a20af6f"
+          }
+        },
+        {
+          "client_id": "696985231159-2diso3rj955iuifd5v8bi7k207vn60ff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAntr8hlMFBUtna4rpzjYNcM8mCk3uLM30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696985231159-2diso3rj955iuifd5v8bi7k207vn60ff.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "696985231159-0niq67varsprucr4isasbbgf92bbir6a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.santimattius.kmp.compose.skeleton.kmp-compose-gradle-skeleton"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696985231159:android:c75959646d2153afcf04b2",
+        "android_client_info": {
+          "package_name": "com.santimattius.kmp.compose.skeleton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696985231159-igfohilpivvidp0nncav3hksdb8kni1f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.santimattius.kmp.compose.skeleton",
+            "certificate_hash": "a03e6001e94baa2cfcde7bc85a02d4596a20af6f"
+          }
+        },
+        {
+          "client_id": "696985231159-2diso3rj955iuifd5v8bi7k207vn60ff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAntr8hlMFBUtna4rpzjYNcM8mCk3uLM30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696985231159-2diso3rj955iuifd5v8bi7k207vn60ff.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "696985231159-0niq67varsprucr4isasbbgf92bbir6a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.santimattius.kmp.compose.skeleton.kmp-compose-gradle-skeleton"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

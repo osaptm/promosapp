@@ -11,6 +11,9 @@ plugins {
     //ROOM
     alias(libs.plugins.room)
     alias(libs.plugins.ksp)
+    //login passage
+    id("com.google.gms.google-services")
+
 }
 
 kotlin {
@@ -42,6 +45,11 @@ kotlin {
             implementation(libs.koin.android)
             //Splash Screen
             implementation(libs.core.splashscreen)
+
+            //login passage
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
+            implementation("com.google.firebase:firebase-auth:23.2.0")
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -71,10 +79,17 @@ kotlin {
             implementation(libs.sqlite.bundled)
             //NAVIGATION COMPOSE
             implementation(libs.navigation.compose)
+            //LOGIN PASSAGE
+            implementation(libs.kmpkit)
+            implementation(libs.passage)
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+            implementation(project.dependencies.platform("com.google.firebase:firebase-bom:33.10.0"))
         }
         iosMain.dependencies {
             //Ktor para consumo de APIS
             implementation(libs.ktor.client.darwin)
+            //LOGIN PASSAGE
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
         }
     }
 }
@@ -107,12 +122,16 @@ android {
 }
 
 dependencies {
+    //Login Passage - Tener los 3 siguientes
+    implementation(libs.androidx.startup.runtime)
     debugImplementation(compose.uiTooling)
+    implementation(libs.passage)
     //ROOM KSP
     add("kspAndroid", libs.androidx.room.compiler)
     add("kspIosSimulatorArm64", libs.androidx.room.compiler)
     add("kspIosX64", libs.androidx.room.compiler)
     add("kspIosArm64", libs.androidx.room.compiler)
+
 }
 
 room { schemaDirectory("$projectDir/schemas") }
