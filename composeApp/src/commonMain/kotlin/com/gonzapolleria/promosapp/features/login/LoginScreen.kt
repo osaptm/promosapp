@@ -28,7 +28,7 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.repeatOnLifecycle
 import com.gonzapolleria.promosapp.core.passage.providePassage
-import com.gonzapolleria.promosapp.shared.Enviroments
+import com.gonzapolleria.promosapp.shared.enviroments.Enviroments
 import com.gonzapolleria.promosapp.shared.room.entities.ConfigEntity
 import com.tweener.passage.Passage
 import com.tweener.passage.gatekeeper.email.model.PassageEmailAuthParams
