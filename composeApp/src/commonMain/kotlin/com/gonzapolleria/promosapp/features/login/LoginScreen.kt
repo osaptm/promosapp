@@ -43,11 +43,11 @@ import com.tweener.passage.model.EmailPasswordGatekeeperConfiguration
 import com.tweener.passage.model.Entrant
 import com.tweener.passage.model.GoogleGatekeeperAndroidConfiguration
 import com.tweener.passage.model.GoogleGatekeeperConfiguration
+import dev.gitlive.firebase.Firebase
 import kotlinx.coroutines.launch
 
-
 @Composable
-fun LoginScreen(firstConfig: ConfigEntity?){
+fun LoginScreen(firstConfig: ConfigEntity?, onFinished: () -> Unit){
 
 
     val buttonsScope = rememberCoroutineScope()
@@ -68,7 +68,7 @@ fun LoginScreen(firstConfig: ConfigEntity?){
                     ),
                     AppleGatekeeperConfiguration(),
                     EmailPasswordGatekeeperConfiguration,
-                )
+                ), firebase = Firebase,
             )
             // Check if an Entrant already exists
             entrant = passage.getCurrentUser()
@@ -109,8 +109,16 @@ fun LoginScreen(firstConfig: ConfigEntity?){
                     Button(onClick = {
                         buttonsScope.launch {
                             passage.authenticateWithGoogle()
-                                .onSuccess { entrant = it }
-                                .onFailure { it.message?.let { message -> snackbarScope.launch { snackbarHostState.showSnackbar(message = message) } } }
+                                .onSuccess {
+                                   // entrant = it
+                                    onFinished()
+                                }
+                                .onFailure { it.message?.let { message ->
+                                    snackbarScope.launch {
+                                         snackbarHostState.showSnackbar(message = message)
+                                        }
+                                    }
+                                }
                         }
                     }) {
                         Text("Sign in with Google")
@@ -121,8 +129,16 @@ fun LoginScreen(firstConfig: ConfigEntity?){
                     Button(onClick = {
                         buttonsScope.launch {
                             passage.authenticateWithApple()
-                                .onSuccess { entrant = it }
-                                .onFailure { it.message?.let { message -> snackbarScope.launch { snackbarHostState.showSnackbar(message = message) } } }
+                                .onSuccess {
+                                    //entrant = it
+                                    onFinished()
+                                }
+                                .onFailure { it.message?.let { message ->
+                                    snackbarScope.launch {
+                                        snackbarHostState.showSnackbar(message = message)
+                                    }
+                                }
+                                }
                         }
                     }) {
                         Text("Sign in with Apple")

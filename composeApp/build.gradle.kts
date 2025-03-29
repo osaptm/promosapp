@@ -29,6 +29,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
+            export("io.github.mirzemehdi:kmpnotifier:1.4.0")
             baseName = "ComposeApp"
             isStatic = true
         }
@@ -47,9 +48,12 @@ kotlin {
             implementation(libs.core.splashscreen)
 
             //login passage
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.10.1")
             implementation("com.google.firebase:firebase-auth:23.2.0")
+
+            // PARA FUNCIONAR NOTIFICACIONES PUSH
+            implementation("androidx.startup:startup-runtime:1.2.0")
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -82,14 +86,19 @@ kotlin {
             //LOGIN PASSAGE
             implementation(libs.kmpkit)
             implementation(libs.passage)
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
             implementation(project.dependencies.platform("com.google.firebase:firebase-bom:33.10.0"))
+            implementation("dev.gitlive:firebase-auth:2.1.0")
+
+
+            //NOTIFICACIONES PUSH
+            api("io.github.mirzemehdi:kmpnotifier:1.4.0")
         }
         iosMain.dependencies {
             //Ktor para consumo de APIS
             implementation(libs.ktor.client.darwin)
             //LOGIN PASSAGE
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
         }
     }
 }

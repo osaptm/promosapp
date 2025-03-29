@@ -9,12 +9,14 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.gonzapolleria.promosapp.features.home.HomeScreen
 import com.gonzapolleria.promosapp.features.initconfigs.domain.usecases.GetConfigFlow_UseCase
 import com.gonzapolleria.promosapp.features.initconfigs.domain.usecases.GetConfigSuspend_UseCase
 import com.gonzapolleria.promosapp.features.initconfigs.domain.usecases.GetFirstConfig_UseCase
 import com.gonzapolleria.promosapp.features.login.LoginScreen
 import com.gonzapolleria.promosapp.features.onboarding.OnboardingScreen
 import com.gonzapolleria.promosapp.features.onboarding.OnboardingUtils
+import com.gonzapolleria.promosapp.features.pushnotifications.PushScreen
 import com.gonzapolleria.promosapp.shared.room.entities.ConfigEntity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -25,7 +27,7 @@ import org.koin.compose.koinInject
 @Composable
 fun NavigationWrapper() {
     val mainNavController = rememberNavController()
-    val initialRoute = if (OnboardingUtils.isOnboardingCompleted()) Routes.Home.route else Routes.Onboarding.route
+    val initialRoute = if (OnboardingUtils.isOnboardingCompleted()) Routes.Login.route else Routes.Onboarding.route
 
     /**************************************************************************************************************/
     // GetConfigFlow_UseCase Usa Flows en vez de suspend
@@ -54,14 +56,34 @@ fun NavigationWrapper() {
 
     NavHost(navController = mainNavController, startDestination = initialRoute) {
 
+        composable(route = Routes.Push.route) {
+            PushScreen()
+        }
+
         composable(route = Routes.Home.route) {
-            LoginScreen(firstConfigRoom.value)
+            HomeScreen(){
+                mainNavController.navigate(Routes.Login.route){
+                    popUpTo(Routes.Home.route) {
+                        inclusive = true
+                    }
+                }
+            }
+        }
+
+        composable(route = Routes.Login.route) {
+            LoginScreen(firstConfigRoom.value){
+                mainNavController.navigate(Routes.Home.route){
+                    popUpTo(Routes.Login.route) {
+                        inclusive = true
+                    }
+                }
+            }
         }
 
         composable(route = Routes.Onboarding.route) {
             OnboardingScreen {
                 OnboardingUtils.setOnboardingCompleted()
-                mainNavController.navigate(Routes.Home.route) {
+                mainNavController.navigate(Routes.Login.route) {
                     popUpTo(Routes.Onboarding.route) {
                         inclusive = true
                     }
