@@ -1,7 +1,6 @@
 package com.gonzapolleria.promosapp.core.pushnotifications
 
 import android.util.Log
-import android.widget.Toast
 import com.gonzapolleria.promosapp.ActivityContextProvider
 import com.mmk.kmpnotifier.notification.NotifierManager
 import com.mmk.kmpnotifier.notification.configuration.NotificationPlatformConfiguration
@@ -30,8 +29,14 @@ actual class NotificationPermissionHelper actual constructor() {
         try{
             val permissionUtil = androidPermissionUtilProvider.permisoProvider
             val context = ActivityContextProvider.context
+            // Primero verificar si ya tenemos el permiso
+            if (androidPermissionUtilProvider.hasNotificationPermission()) {
+                onGranted()
+                return
+            }
+            // Si no lo tenemos, entonces solicitarlo
             permissionUtil.askNotificationPermission { isSuccess ->
-                if (!isSuccess) onGranted()
+                if (isSuccess) onGranted()
                 else onDenied()
             }
         }catch (error: Exception){

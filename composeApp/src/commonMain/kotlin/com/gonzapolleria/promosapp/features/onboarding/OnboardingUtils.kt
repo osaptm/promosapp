@@ -29,6 +29,12 @@ class OnboardingUtils() {
             prefs.putString("onboardingCompleted", "true")
         }
 
+        fun setOnboardingNotCompleted() {
+            val prefs = SharedPreferencesHelper()
+            excistOnboarding(prefs)
+            prefs.putString("onboardingCompleted", "false")
+        }
+
     }
 
 }

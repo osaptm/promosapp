@@ -21,6 +21,7 @@ import com.gonzapolleria.promosapp.core.passage.providePassage
 import com.gonzapolleria.promosapp.core.pushnotifications.NotificationPermissionHelper
 import com.gonzapolleria.promosapp.shared.BackgroundPrimaryColor
 import com.gonzapolleria.promosapp.shared.DefaultTextColor
+import com.mmk.kmpnotifier.notification.NotifierManager
 import com.tweener.passage.Passage
 import com.tweener.passage.model.Entrant
 import kotlinx.coroutines.launch
@@ -31,9 +32,15 @@ fun HomeScreen(onSignOut: () -> Unit){
     val passage: Passage = providePassage()
     var entrant by remember { mutableStateOf<Entrant?>(null) }
     val lifecycleOwner = LocalLifecycleOwner.current
+
     val permissionHelper = NotificationPermissionHelper()
+    val token = remember { mutableStateOf("") }
 
         LaunchedEffect(Unit) {  // "Unit" como key para que solo se ejecute una vez
+
+            token.value = NotifierManager.getPushNotifier().getToken().toString()
+            println(token.value)
+
             permissionHelper.requestNotificationPermission(
                 onGranted = {
                     println("Permiso concedido")
@@ -66,5 +73,6 @@ fun HomeScreen(onSignOut: () -> Unit){
         }) {
             Text("Sign out en HOME")
         }
+        Text(text = token.value)
     }
 }

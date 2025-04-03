@@ -1,4 +1,3 @@
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -67,6 +66,7 @@ kotlin {
 
             //WEBVIEW PARA VIDEOS
             api(libs.compose.webview.multiplatform)
+
             //Coil para cargar Imagenes de URL
             implementation(libs.coil.compose)
             implementation(libs.coil.network.ktor3)
@@ -89,8 +89,6 @@ kotlin {
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
             implementation(project.dependencies.platform("com.google.firebase:firebase-bom:33.10.0"))
             implementation("dev.gitlive:firebase-auth:2.1.0")
-
-
             //NOTIFICACIONES PUSH
             api("io.github.mirzemehdi:kmpnotifier:1.4.0")
         }
@@ -133,6 +131,8 @@ android {
 dependencies {
     //Login Passage - Tener los 3 siguientes
     implementation(libs.androidx.startup.runtime)
+    implementation(libs.androidx.foundation.layout.android)
+    implementation(libs.androidx.runtime.android)
     debugImplementation(compose.uiTooling)
     implementation(libs.passage)
     //ROOM KSP
